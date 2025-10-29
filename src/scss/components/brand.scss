@@ -1,0 +1,83 @@
+.brand {
+  .brand__content {
+    .content__top {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 45px;
+      .top__item {
+        width: calc((100% - 140px) / 4);
+        height: 110px;
+        position: relative;
+        img {
+          position: absolute;
+          max-width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+      @media #{$info-tablet-horizontal} {
+        gap: 25px;
+        .top__item {
+          width: calc((100% - 50px) / 3);
+        }
+      }
+      @media #{$info-tablet-vertical-1} {
+        gap: 15px;
+      }
+      @media #{$info-phone-2} {
+        justify-content: center;
+        gap: 25px;
+        .top__item {
+          width: calc((100% - 50px) / 2);
+        }
+      }
+      // @media #{$info-phone-2} {
+      //   gap: 15px;
+      //   .top__item {
+      //     width: calc((100% - 15px) / 2);
+      //     img {
+      //       max-width: -webkit-fill-available;
+      //     }
+      //   }
+      // }
+      // $info-tablet-vertical-1: "only screen and (max-width : 896px)";
+    }
+    .content_bottom {
+      display: flex;
+      margin-top: 33px;
+      gap: 33px;
+      .bottom_item {
+        height: 263px;
+        img {
+          width: 100%;
+          height: 100%;
+        }
+        @media #{$info-tablet-vertical} {
+          height: 180px;
+        }
+        @media #{$info-tablet-vertical-1} {
+          height: 260px;
+        }
+        @media #{$info-phone} {
+          height: 180px;
+        }
+      }
+      .bottom_item:first-child {
+        width: 60%;
+        @media #{$info-tablet-vertical-1} {
+          width: 100%;
+        }
+      }
+      .bottom_item:last-child {
+        width: 40%;
+        @media #{$info-tablet-vertical-1} {
+          width: 100%;
+        }
+      }
+      @media #{$info-tablet-vertical-1} {
+        margin-top: 15px;
+        flex-direction: column;
+      }
+    }
+  }
+}
