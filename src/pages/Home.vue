@@ -25,17 +25,15 @@
           <div
             class="col-span-2 row-start-3 flex flex-col space-y-2 md:space-y-4"
           >
-            <a
-              href="https://t.me/TobiCopilotBot"
-              target="_blank"
-              rel="noopener noreferrer nofollow"
-              class="btn btn-primary button-1 font-bold space-x-2.5 w-[184px] md:w-[218px]"
+            <button
+              disabled
+              class="btn button-1 font-bold space-x-2.5 w-[184px] md:w-[218px] bg-gray-300 text-gray-500 cursor-not-allowed opacity-60"
             >
               <span>Get Tobi now</span>
               <div class="icon-btn">
                 <IconArrow />
               </div>
-            </a>
+            </button>
             <div class="space-y-1 md:max-w-[288px] w-full">
               <div class="title-2 text-gray-900">Simple, secure, free</div>
               <div class="body-2 text-gray-700">
@@ -441,26 +439,6 @@
               <p class="font-semibold">
                 So come on in - with Tobi, web3 is easy.
               </p>
-            </div>
-            <div class="space-y-6">
-              <a
-                href="https://docs.tobi.fun"
-                target="_blank"
-                rel="noopener noreferrer nofollow"
-                class="btn btn-primary button-1 font-bold space-x-2.5 w-[218px]"
-              >
-                <span>Explore more</span>
-                <div class="icon-btn">
-                  <IconArrow />
-                </div>
-              </a>
-              <div class="space-y-1 max-w-[288px] w-full">
-                <div class="title-2 text-gray-900">Learn more about Tobi</div>
-                <div class="body-2 text-gray-700">
-                  What it is, why we built it, <br />
-                  what you can do with it, and more.
-                </div>
-              </div>
             </div>
           </div>
           <div

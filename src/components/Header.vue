@@ -13,43 +13,15 @@
           <LogoHeader />
         </a>
         <div class="flex items-center space-x-6">
-          <div class="hidden md:flex items-center space-x-3">
-            <a
-              href="https://x.com/TobiCopilot"
-              target="_blank"
-              rel="noopener noreferrer nofollow"
-              class="header-social-icon"
-            >
-              <IconX />
-            </a>
-            <a
-              href="https://t.me/TobiCommunity"
-              target="_blank"
-              rel="noopener noreferrer nofollow"
-              class="header-social-icon"
-            >
-              <IconTelegram />
-            </a>
-            <a
-              href="https://medium.com/TobiCopilot"
-              target="_blank"
-              rel="noopener noreferrer nofollow"
-              class="header-social-icon"
-            >
-              <IconMedium />
-            </a>
-          </div>
-          <a
-            href="https://t.me/TobiCopilotBot"
-            target="_blank"
-            rel="noopener noreferrer nofollow"
-            class="btn btn-primary button-2 max-md:h-9 !font-bold md:space-x-2.5 w-[98px] md:w-[147px] max-md:px-0"
+          <button
+            disabled
+            class="btn button-2 max-md:h-9 !font-bold md:space-x-2.5 w-[98px] md:w-[147px] max-md:px-0 bg-gray-300 text-gray-500 cursor-not-allowed opacity-60"
           >
             <span>Get Tobi</span>
             <div class="icon-btn max-md:hidden">
               <IconArrow />
             </div>
-          </a>
+          </button>
           <div
             class="md:hidden w-10 h-10 flex items-center justify-center"
             @click="handleMobile()"
@@ -148,65 +120,21 @@
             </a>
           </div>
         </div>
-        <div class="space-y-4">
-          <div class="body-2 font-medium text-gray-400">Community</div>
-          <div class="flex md:flex-col md:space-x-0 space-x-6 md:space-y-4">
-            <div>
-              <a
-                href="https://x.com/TobiCopilot"
-                target="_blank"
-                rel="noopener noreferrer nofollow"
-              >
-                <IconXFooter />
-              </a>
-            </div>
-            <div>
-              <a
-                href="https://t.me/TobiCommunity"
-                target="_blank"
-                rel="noopener noreferrer nofollow"
-              >
-                <IconTelegramFooter />
-              </a>
-            </div>
-            <div>
-              <a
-                href="https://medium.com/TobiCopilot"
-                target="_blank"
-                rel="noopener noreferrer nofollow"
-              >
-                <IconMediumFooter />
-              </a>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   </header>
 </template>
 
 <script>
-import IconX from "@/components/icon/IconX.vue";
-import IconTelegram from "@/components/icon/IconTelegram.vue";
-import IconMedium from "@/components/icon/IconMedium.vue";
 import IconArrow from "@/components/icon/IconArrow.vue";
 import IconHamburger from "@/components/icon/Hamburger.vue";
 import LogoHeader from "@/components/icon/LogoHeader.vue";
-import IconXFooter from "@/components/icon/XFooter.vue";
-import IconTelegramFooter from "@/components/icon/TelegramFooter.vue";
-import IconMediumFooter from "@/components/icon/MediumFooter.vue";
 import Close from "@/components/icon/Close.vue";
 
 export default {
   components: {
-    IconX,
-    IconTelegram,
-    IconMedium,
     IconArrow,
     IconHamburger,
-    IconXFooter,
-    IconTelegramFooter,
-    IconMediumFooter,
     LogoHeader,
     Close,
   },
