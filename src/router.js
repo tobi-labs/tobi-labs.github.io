@@ -4,7 +4,7 @@ import PrivatePolicy from "@/pages/PrivatePolicy.vue";
 import Terms from "@/pages/Terms.vue";
 
 const router = createRouter({
-  history: createWebHashHistory(),
+  history: createWebHashHistory('/tobi-landing/'),
   routes: [
     { path: "/", component: Home },
     { path: "/private-policy", component: PrivatePolicy },
