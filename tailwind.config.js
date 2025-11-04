@@ -1,5 +1,7 @@
 /** @type {import('tailwindcss').Config} */
-const defaultTheme = require("tailwindcss/defaultTheme");
+import defaultTheme from "tailwindcss/defaultTheme.js";
+import typography from "@tailwindcss/typography";
+import aspectRatio from "@tailwindcss/aspect-ratio";
 
 export default {
   content: [
@@ -124,11 +126,6 @@ export default {
                 display: ["Cubano", ...defaultTheme.fontFamily.sans],
                 sans: ["Rubik", ...defaultTheme.fontFamily.sans],
             },
-            backgroundImage: {
-                'category-product': "url('/public/assets/images/bgProuct.png')",
-                'banner-product': "url('/public/assets/images/bannerProduct2.png')",
-                'bg-contact': "url('/public/assets/images/contact/bg.png')",
-            },
             container: {
                 center: true,
                 padding: {
@@ -142,8 +139,7 @@ export default {
     },
 
     plugins: [
-        require("@tailwindcss/typography"),
-        require("@tailwindcss/aspect-ratio"),
+        typography,
+        aspectRatio,
     ],
 }
-

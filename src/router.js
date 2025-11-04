@@ -1,10 +1,10 @@
-import { createRouter, createWebHistory } from "vue-router";
+import { createRouter, createWebHashHistory } from "vue-router";
 import Home from "@/pages/Home.vue";
 import PrivatePolicy from "@/pages/PrivatePolicy.vue";
 import Terms from "@/pages/Terms.vue";
 
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHashHistory(),
   routes: [
     { path: "/", component: Home },
     { path: "/private-policy", component: PrivatePolicy },

@@ -424,7 +424,6 @@ import IconCloseTobi from "@/components/icon/CloseTobi.vue";
 import IconArrow from "@/components/icon/IconArrow.vue";
 import IconSuccessV2 from "@/components/icon/SuccessV2.vue";
 import { validateForm } from "@/lib/validator";
-import { sendInquiryRequest, sendPartnerRequest } from "@/lib/slack";
 
 const emptyForm = {
   name: null,
@@ -513,24 +512,14 @@ export default {
         return;
       }
 
-      try {
-        const response = await sendPartnerRequest(this.form.contact.data);
-        if (response?.code === 1000) {
-          this.isSuccess = true;
-          this.form.contact.data = {
-            ...emptyForm,
-          };
-          this.isSubmit = true;
-          document.body.style.overflow = "hidden";
-        } else {
-          this.isErrorSendingMessage = true;
-          this.errorMessage = response?.message;
-        }
-      } catch (error) {
-        console.log(`Error submit form: ${error?.message}`);
-        this.isErrorSendingMessage = true;
-        this.errorMessage = error?.message;
-      }
+      // Note: Backend integration removed for simplified GitHub Pages deployment
+      // Form submission will show success message but data is not sent anywhere
+      this.isSuccess = true;
+      this.form.contact.data = {
+        ...emptyForm,
+      };
+      this.isSubmit = true;
+      document.body.style.overflow = "hidden";
     },
     async onSubmitFormGeneral(event) {
       event.preventDefault();
@@ -543,26 +532,14 @@ export default {
         return;
       }
 
-      try {
-        const response = await sendInquiryRequest(
-          this.formGeneral.contact.data
-        );
-        if (response?.code === 1000) {
-          this.isSuccess = true;
-          this.formGeneral.contact.data = {
-            ...emptyFormGeneral,
-          };
-          this.isSubmit = true;
-          document.body.style.overflow = "hidden";
-        } else {
-          this.isErrorSendingMessage = true;
-          this.errorMessage = response?.message;
-        }
-      } catch (error) {
-        console.log(`Error submit form: ${error?.message}`);
-        this.isErrorSendingMessage = true;
-        this.errorMessage = error?.message;
-      }
+      // Note: Backend integration removed for simplified GitHub Pages deployment
+      // Form submission will show success message but data is not sent anywhere
+      this.isSuccess = true;
+      this.formGeneral.contact.data = {
+        ...emptyFormGeneral,
+      };
+      this.isSubmit = true;
+      document.body.style.overflow = "hidden";
     },
     closeModalPartnerships() {
       this.isOpenPartnerships = false;

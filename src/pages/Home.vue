@@ -652,7 +652,6 @@ import IconTobi from "@/components/icon/Tobi.vue";
 import SocialMeta from "@/components/SocialMeta.vue";
 import { validateForm } from "@/lib/validator";
 import { getImageName, getImagePath } from "@/lib/util";
-import { sendPartnerRequest } from "@/lib/slack";
 import SliderMember from "@/components/SliderMember.vue";
 import IconArrow from "@/components/icon/IconArrow.vue";
 import IconCloseTobi from "@/components/icon/CloseTobi.vue";
@@ -956,24 +955,14 @@ export default {
         return;
       }
 
-      try {
-        const response = await sendPartnerRequest(this.form.contact.data);
-        if (response?.code === 1000) {
-          this.isSuccess = true;
-          this.form.contact.data = {
-            ...emptyForm,
-          };
-          this.isSubmit = true;
-          document.body.style.overflow = "hidden";
-        } else {
-          this.isErrorSendingMessage = true;
-          this.errorMessage = response?.message;
-        }
-      } catch (error) {
-        console.log(`Error submit form: ${error?.message}`);
-        this.isErrorSendingMessage = true;
-        this.errorMessage = error?.message;
-      }
+      // Note: Backend integration removed for simplified GitHub Pages deployment
+      // Form submission will show success message but data is not sent anywhere
+      this.isSuccess = true;
+      this.form.contact.data = {
+        ...emptyForm,
+      };
+      this.isSubmit = true;
+      document.body.style.overflow = "hidden";
     },
     closeModalPartnerships() {
       this.isSuccess = false;
