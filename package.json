@@ -1,7 +1,11 @@
 {
   "name": "tobi-landing-page",
-  "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
+  "description": "Landing page for Tobi - Your AI-powered web3 assistant",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tobi-labs/tobi-labs.github.io"
+  },
   "scripts": {
     "dev": "vite",
     "build": "vite build",
