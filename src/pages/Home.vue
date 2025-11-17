@@ -390,7 +390,7 @@
       </div>
     </section>
 
-    <section class="py-10 md:py-20 max-md:space-y-10">
+    <!-- <section class="py-10 md:py-20 max-md:space-y-10">
       <div class="container md:space-y-10">
         <h2
           class="display-1 text-gray-900 text-center uppercase md:w-full w-[80%] mx-auto"
@@ -411,7 +411,7 @@
         </div>
       </div>
       <SliderMember class="md:hidden pl-5" :slides="members" />
-    </section>
+    </section> -->
 
     <section class="py-10 md:py-20">
       <div class="container space-y-10">
